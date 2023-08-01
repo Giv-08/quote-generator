@@ -1,0 +1,134 @@
+html {
+  height: 100%;
+  /* max-height: 600px; */
+
+  background-color: hsla(200, 40%, 30%, 0.4);
+  background-image: url("https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png"),
+    url("https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png"),
+    url("https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png"),
+    url("https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png"),
+    url("https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png");
+  background-repeat: repeat-x;
+  background-position: 0 20%, 0 100%, 0 50%, 0 100%, 0 0;
+  background-size: 3100px, 1500px, 500px 300px, 1000px, 400px 370px;
+  animation: 50s para infinite linear;
+  -webkit-transform: translate(0%, 0%);
+  -moz-transform: translate(0%, 0%);
+  -ms-transform: translate(0%, 0%);
+  -o-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+}
+
+@keyframes para {
+  100% {
+    background-position: -2000px 20%, -1000px 100%, 500px 20%, 1000px 100%,
+      400px 10%;
+  }
+}
+
+body {
+  margin: 0px;
+  width: 100%;
+  text-align: center;
+}
+div {
+  display: block;
+  margin: auto;
+}
+h1 {
+  color: hsl(30.98deg 100% 77.63%);
+  margin-top: 150px;
+  font-weight: bolder;
+  font-size: 4rem;
+  text-shadow: 4px 2px #ff5200;
+  font-family: "Roboto", sans-serif;
+}
+#quoteDisplay {
+  font-weight: bolder;
+  font-size: 40px;
+  font-family: "Roboto", sans-serif;
+  text-shadow: 4px 2px #e3924c;
+}
+
+.quoteBtn {
+  margin: auto;
+  color: hsl(0, 0%, 100%);
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 3px;
+  padding: 15px 80px 15px;
+  outline: 0;
+  border: 1px solid rgb(255, 255, 255);
+  cursor: pointer;
+  position: absolute;
+  top: 60%;
+  left: 44%;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.quoteBtn::after {
+  content: "";
+  background-color: hsl(24.92deg 60.84% 66.19%);
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.quoteBtn:hover::after {
+  top: 0px;
+  left: 0px;
+}
+
+/* center the blockquote in the page */
+.blockquote-wrapper {
+  display: flex;
+  margin-top: 0;
+}
+
+/* Blockquote main style */
+.blockquote {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  color: #ffe9cd;
+  padding: 40px;
+  width: 100%;
+  max-width: 600px;
+  z-index: 1;
+  margin: 80px auto;
+  align-self: center;
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+}
+
+/* Blockquote header */
+.blockquote h1 {
+  position: relative;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+}
+
+/* Blockquote right double quotes */
+/*.blockquote:after {
+  position: absolute;
+  content: "”";
+  color: rgba(255, 255, 255, 1);
+  font-size: 10rem;
+  line-height: 0;
+  bottom: -43px;
+  right: 30px;
+}
+
+/* increase header size after 600px */
+@media all and (min-width: 600px) {
+  .blockquote h1 {
+    font-size: 60px;
+  }
+}
